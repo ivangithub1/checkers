@@ -1,0 +1,169 @@
+html {
+	height: 100%;
+}
+
+html,
+body {
+	min-height: 100%;
+	background-color: #4fc2f7c0;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+.ba-container {
+	width: 90vmin;
+	height: 90vmin;
+	background-color: #dfdbdb;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.checkers {
+	width: 80vmin;
+	height: 80vmin;
+	background-color: #fff;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.dark-block,
+.white-block {
+	height: 50%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+}
+
+.white-block{
+	top: 0;
+	
+}
+
+.dark-block{
+	bottom: 0;
+	
+}
+
+.row{
+	position: absolute;
+    height: 25%;
+	width: 100%;
+	left: 0;
+}
+
+.white-block .row:nth-child(1),
+.dark-block .row:nth-child(1){
+	top: 0;
+}
+
+.white-block .row:nth-child(2),
+.dark-block .row:nth-child(2){
+	top: 25%;
+}
+
+.white-block .row:nth-child(3),
+.dark-block .row:nth-child(3){
+	top: 50%;
+}
+
+.white-block .row:nth-child(4),
+.dark-block .row:nth-child(4){
+	top: 75%;
+}
+
+.col{
+	width: 12.5%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.col:nth-child(1){
+	left:0;
+}
+
+.col:nth-child(2){
+	left:12.5%;
+}
+
+.col:nth-child(3){
+	left:25%;
+}
+
+.col:nth-child(4){
+	left:37.5%;
+}
+
+.col:nth-child(5){
+	left:50%;
+}
+
+.col:nth-child(6){
+	left:62.5%;
+}
+
+.col:nth-child(7){
+	left:75%;
+}
+.col:nth-child(8){
+	left:87.5%;
+}
+
+.row:nth-child(odd) .col:nth-child(odd){
+	background-color: #000;
+}
+
+.row:nth-child(odd) .col:nth-child(even){
+	background-color: #fff;
+}
+
+.row:nth-child(even) .col:nth-child(even){
+    background-color: #000;
+}
+
+.row:nth-child(even) .col:nth-child(odd){
+    background-color: #fff;
+}
+
+
+.white-block .row:nth-child(1) .col:nth-child(odd)::before,
+.white-block .row:nth-child(2) .col:nth-child(even)::before,
+.white-block .row:nth-child(3) .col:nth-child(odd)::before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 75%;
+	height: 75%;
+	border-radius: 50%;
+	background-color:	red;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.dark-block .row:nth-child(2) .col:nth-child(even)::before,
+.dark-block .row:nth-child(3) .col:nth-child(odd)::before,
+.dark-block .row:nth-child(4) .col:nth-child(even)::before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 75%;
+	height: 75%;
+	border-radius: 50%;
+	background-color:	#dfdbdb;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
